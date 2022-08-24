@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Controller;
+
+use App\Core\Controller;
+
 class Home extends Controller
 {
     public function index($name = '')
@@ -15,6 +19,7 @@ class Home extends Controller
             'username' => $username,
             'email' => $email
         ]);
+        echo "Entry added to database!";
     }
 
     public function delete($username = '', $email = '') 
