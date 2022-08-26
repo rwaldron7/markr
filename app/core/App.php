@@ -48,7 +48,7 @@ class App
         // If the array have any values left, move them to a new array.
         $this->params = $url ? array_values($url) : [];
         
-        print_r($this->controller, $this->method, $this->params);
+        // print_r($this->controller, $this->method, $this->params);
         echo "Contoller function is about to be called.";
 
         // Call the method on the controller, with the array of parameters as inputs.
