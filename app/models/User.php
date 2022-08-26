@@ -11,6 +11,7 @@ class User extends Model
     
     public function get()
     {
+        echo "Get is being called";
         $sql = 'SELECT username, user_id FROM users';
         $stmt = self::$conn->prepare($sql);
         $stmt->execute();

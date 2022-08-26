@@ -12,6 +12,7 @@ class Home extends Controller
     {
         echo "Home/index is being called";
         $users = $this->model('User')->get();
+        echo "Got past the get method";
         $this->view('/home/index', $users);
     }
 
