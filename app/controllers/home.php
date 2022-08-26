@@ -10,6 +10,7 @@ class Home extends Controller
     // Default method. Calls model and view for home/index. At the moment, just gets all users and prints to home view.
     public function index()
     {
+        echo "Home/index is being called";
         $users = $this->model('User')->get();
         $this->view('/home/index', $users);
     }
