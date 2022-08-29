@@ -19,11 +19,6 @@ class Model
                 $db = "markr";
                 // Connect to DB
                 self::$conn = new \PDO("mysql:host=$host;dbname=$db",$user,$pw);
-                if(self::$conn==true)
-                {
-                    echo nl2br ("Local database connected successfully\n");
-                }
-                
             }
             catch (\PDOException $e)
             {
@@ -34,12 +29,7 @@ class Model
                 $pw = $url["pass"];
                 $db = substr($url["path"], 1);
                 // Connect to DB
-                self::$conn = new \PDO("mysql:host=$host;dbname=$db",$user,$pw);
-                if(self::$conn==true)
-                {
-                    echo nl2br ("Remote database connected successfully\n");   
-                }
-                
+                self::$conn = new \PDO("mysql:host=$host;dbname=$db",$user,$pw);          
             }
             
         }

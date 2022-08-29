@@ -47,9 +47,6 @@ class App
 
         // If the array have any values left, move them to a new array.
         $this->params = $url ? array_values($url) : [];
-        
-        // print_r($this->controller, $this->method, $this->params);
-        echo "Contoller function is about to be called.";
 
         // Call the method on the controller, with the array of parameters as inputs.
         call_user_func_array([$this->controller, $this->method], $this->params);
@@ -61,7 +58,6 @@ class App
         if(isset($_GET['url'])) 
         {
             $url = explode('/', filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL));
-            print_r($url);
             return $url;
         }
     }

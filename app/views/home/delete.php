@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create</title>
+    <title>Delete user</title>
 </head>
 <body>
-    <h1>Create an item</h1>
+    <h1>Delete</h1>
+    <p>Are you sure you want to delete user <?=$data->username ?>?</p>
     <form action="" method="post">
-        <label for="">Name: </label>
-        <input type="text" name="username"/>
-        <input type="submit" name="action" value="Create">
+        <button name="action" value="Yes">Yes</button>
     </form>
-    <a href="/home/index">Cancel</a>
+    <form action="/home/index">
+        <button value="No">No</button>
+    </form>
 </body>
 </html>
