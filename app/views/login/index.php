@@ -1,50 +1,30 @@
-<!doctype html>
-<html lang="en">
+<?php
+  include __DIR__ . '/../template/header.php'; 
+?>
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/all.min.css">
-  </head>
+<main class="container pt-5">
+  <div class="p-5 mt-5 rounded">
+    <h1>Login</h1>
+    <br>
+    <?php
+      if(!is_array($data))
+      {
+          echo "<div class='alert alert-danger' role='alert'>$data</div>";
+      }
+    ?>
+    <form action="" method="post">
+      <div class="form-group mb-3">
+          <label>Username: <input type="text" name="username" class="form-control"/></label>
+      </div>
+      <div class="form-group mb-3">
+          <label>Password: <input type="password" name="password" class="form-control"/></label>
+      </div>
+      <input type="submit" name="action" value="Login" class="btn btn-primary mb-3"/>
+    </form>
+    <span>No account? <a href='/login/register'>Register</a></span>
+  </div>
+</main>
 
-  <body>
-
-  <?php
-    include __DIR__ . '/../template/header.php'; 
-  ?>
-
-  <main class="container pt-5">
-    <div class="bg-light p-5 mt-5 rounded">
-      <h1>Login</h1>
-      <?php
-        if(!is_array($data))
-        {
-            echo "<div class='alert alert-danger' role='alert'>$data</div>";
-        }
-      ?>
-      <form action="" method="post">
-        <div class="form-group">
-            <label>Username: <input type="text" name="username" class="form-control"/></label>
-        </div>
-        <div class="form-group">
-            <label>Password: <input type="password" name="password" class="form-control"/></label>
-        </div>
-        <input type="submit" name="action" value="Login" class="btn btn-primary"/>
-      </form>
-      No account? <a href='/login/register'>Register</a>
-    </div>
-  </main>
-
-  <?php
-    include __DIR__ . '/../template/footer.php';
-  ?>
-
-  <script src="/js/jquery-3.6.1.min.js"></script>
-  <script src="/js/bootstrap.bundle.min.js"></script>
-  <script src="/js/all.min.js"></script>
-
-  </body>
-
-</html>
+<?php
+  include __DIR__ . '/../template/footer.php';
+?>
