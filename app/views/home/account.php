@@ -1,5 +1,5 @@
 <?php
 
-echo "ACCOUNT PAGE";
+echo "ACCOUNT PAGE for {$_SESSION['user_id']}";
 
 ?>
