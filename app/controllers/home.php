@@ -51,16 +51,16 @@ class Home extends Controller
         $this->view('home/exam_list', $exam_list);
     }
 
-    public function edit_exam($exam_id)
+    public function mark_exam($exam_id)
     {
         if ($_SESSION['user_id'] == null)
         {
             header('location:/login/index');
             return;
         }
-        $results = $this->model('Results')->edit_exam($exam_id);
+        $results = $this->model('Results')->mark_exam($exam_id);
         $exam = $this->model('Exam')->get_exam($exam_id);
-        $this->view('/home/edit_exam', $results, $exam);
+        $this->view('/home/mark_exam', $results, $exam);
     }
 
     public function delete_exam($exam_id)
@@ -80,7 +80,7 @@ class Home extends Controller
         }
     }
 
-    public function add_students($exam_id)
+    public function student_list($exam_id)
     {
         if ($_SESSION['user_id'] == null)
         {
@@ -95,10 +95,10 @@ class Home extends Controller
             $student->last_name = $_POST['last_name'];
             $student->add_student($exam_id);
             $class_list = $this->model('Student')->find_students($exam_id);
-            $this->view('/home/add_students', $class_list);
+            $this->view('/home/student_list', $class_list, $exam_id);
         }
         else{
-            $this->view('/home/add_students', $class_list);
+            $this->view('/home/student_list', $class_list, $exam_id);
         }
     }
 
@@ -113,11 +113,16 @@ class Home extends Controller
         if(isset($_POST['action']))
         {
             $student->delete_student($student_id);
-            header('location:/home/add_students/' . $student -> exam_id);
+            header('location:/home/student_list/' . $student -> exam_id);
         }
         else{
             $this->view('/home/delete_student', $student);
         }
+    }
+
+    public function account()
+    {
+        $this->view('/home/account');
     }
 }
 

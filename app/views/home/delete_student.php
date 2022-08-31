@@ -10,7 +10,7 @@
     <form action="" method="post">
       <button name="action" value="Yes" class="btn btn-danger mb-3">Yes</button>
     </form>
-    <form action="/home/add_students/<?=$data->exam_id;?>">
+    <form action="/home/student_list/<?=$data->exam_id;?>">
       <button value="No" class="btn btn-secondary">No</button>
     </form>
   </div>

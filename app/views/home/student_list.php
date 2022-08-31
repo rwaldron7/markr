@@ -4,9 +4,10 @@
 
 <main class="container pt-5">
   <div class="p-5 mt-5 rounded">
-    <h1>Add students</h1>
+    <h1>Edit students</h1>
     <br>
     <a href="/home/exam_list" class="btn btn-secondary mb-3" role="button">Back to exam list</a>
+    <a href="/home/mark_exam/<?=$extra_data?>" class="btn btn-secondary mb-3" role="button">Mark</a>
     <form action="" method="post">
       <div class="form-group mb-3">
           <label>First name: <input type="text" name="first_name" class="form-control"/></label>

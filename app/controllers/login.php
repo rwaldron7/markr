@@ -16,6 +16,7 @@ class Login extends Controller
             if($user != null && password_verify($_POST['password'], $user->password_hash))
             {
                 $_SESSION['user_id'] = $user->user_id;
+                $_SESSION['username'] = $user->username;
                 header('location:/home/index');
             }
             $this->view('login/index', 'Incorrect username/password combination!');

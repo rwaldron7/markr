@@ -4,6 +4,8 @@
 
       <ul class="nav col-md-4 justify-content-end">
         <li class="nav-item"><a href="/home/index" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="/home/create_exam" class="nav-link px-2 text-muted">Create</a></li>
+        <li class="nav-item"><a href="/home/exam_list" class="nav-link px-2 text-muted">Mark</a></li>
       </ul>
     </footer>
   </div>

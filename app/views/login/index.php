@@ -19,7 +19,7 @@
       <div class="form-group mb-3">
           <label>Password: <input type="password" name="password" class="form-control"/></label>
       </div>
-      <input type="submit" name="action" value="Login" class="btn btn-primary mb-3"/>
+      <input type="submit" name="action" value="Log in" class="btn btn-primary mb-3"/>
     </form>
     <span>No account? <a href='/login/register'>Register</a></span>
   </div>
