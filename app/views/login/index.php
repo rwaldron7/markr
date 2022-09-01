@@ -12,6 +12,11 @@
           echo "<div class='alert alert-danger' role='alert'>$data</div>";
       }
     ?>
+    <p>For testing purposes, use the following account details:</p>
+    <ul>
+      <li>Username: test</li>
+      <li>Password: abc</li>
+    </ul>
     <form action="" method="post">
       <div class="form-group mb-3">
           <label>Username: <input type="text" name="username" class="form-control"/></label>
