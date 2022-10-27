@@ -184,7 +184,8 @@ class Home extends Controller
         $summary = $this->model('Student')->get_student($student_id);
         $configs = $this->model('Exam')->get_config($exam_id);
         $exam = $this->model('Exam')->get_exam($exam_id);
-        $this->view('/home/summary', $summary, $configs, $exam);
+        $cutoffs = $this->model('Exam')->get_cutoffs($exam_id);
+        $this->view('/home/summary', $summary, $configs, $exam, $cutoffs);
     }
 }
 

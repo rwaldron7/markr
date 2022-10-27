@@ -12,18 +12,22 @@
     <form id="class_marks" name="marks" action="" method="post">
       <div class="overflow-auto">
       <?php
+          $total_marks_allocated = 0;
+          foreach ($more_data as $question)
+          {
+            $total_marks_allocated = (int) $total_marks_allocated + (int) $question->marks;
+          }
           if ($data == null)
           {
             echo "<p>This exam has no students yet!</p>";
           }
+          if ($total_marks_allocated == 0)
+          {
+            echo "<p>This exam has no marks allocated yet!</p>";
+          }
           else
           {
             $count = $extra_data->no_of_questions;
-            $total_marks_allocated = 0;
-            foreach ($more_data as $question)
-            {
-              $total_marks_allocated = (int) $total_marks_allocated + (int) $question->marks;
-            }
             $student_count = 0;
             foreach ($data as $student_results)
             {
@@ -81,15 +85,12 @@
             }
             echo "<td class='text-center'>$total_marks_allocated</td><td colspan='3'></td></tr>";
             echo "</table>";
+            echo "</div>
+      <div class='d-flex flex-row-reverse'><input type='submit' name='action' value='Save and update' id='save' class='btn btn-primary mb-3'/></div>
+      <div class='d-flex flex-row-reverse'><button type='button' class='btn btn-warning'>Class summary</button></div>";
           }
       ?>
-      </div>
-      <div class="d-flex flex-row-reverse">
-        <input type="submit" name="action" value="Save and update" id="save" class="btn btn-primary mb-3"/>
-      </div>
-      <div class="d-flex flex-row-reverse">
-        <button type='button' class='btn btn-warning'>Class summary</button>
-      </div>
+      
     </form>
   </div>
 </main>
