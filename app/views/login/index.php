@@ -7,7 +7,6 @@
     <h1>Login</h1>
     <br>
     <?php
-      echo "{$_SESSION['user_id']}";
       if(!is_array($data))
       {
           echo "<div class='alert alert-danger' role='alert'>$data</div>";
