@@ -4,7 +4,10 @@
 
 <main class="container pt-5">
   <div class="p-5 mt-5 rounded">
-    <h1 id="questions">Questions</h1>
+    <h1 id="questions">Configure exam</h1>
+    <br>
+    <a href="/home/exam_list" class="btn btn-secondary mb-3" role="button">Back to exam list</a>
+    <h3 id="questions">Questions</h3>
     <form id="exam_out_of" name="out_of" action="" method="post">
       <div class="overflow-auto">
       <?php
@@ -46,12 +49,12 @@
             echo "</table>";
       ?>
       </div>
-      <div class="d-flex flex-row-reverse">
+      <div class="d-flex">
         <input type="submit" name="config_q" value="Save configuration" id="save_config" class="btn btn-primary mb-3"/>
       </div>
     </form>
     
-    <h1 id="cutoffs">Cut-offs</h1>
+    <h3 id="cutoffs">Cut-offs</h3>
     <table class='table table-borderless table-marking w-auto'>
         <div class="overflow-auto">
         <thead class='table-secondary'><tr><th class='text-center'>Grade</th><th class='text-center'>Cut-off</th></tr></thead>
