@@ -87,7 +87,7 @@
             echo "</table>";
             echo "</div>
       <div class='d-flex flex-row-reverse'><input type='submit' name='action' value='Save and update' id='save' class='btn btn-primary mb-3'/></div>
-      <div class='d-flex flex-row-reverse'><button type='button' class='btn btn-warning'>Class summary</button></div>";
+      <div class='d-flex flex-row-reverse'><a class='btn btn-warning' href='/home/class_summary/$extra_data->exam_id'>Class summary</a></div>";
           }
       ?>
       

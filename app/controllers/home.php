@@ -187,5 +187,19 @@ class Home extends Controller
         $cutoffs = $this->model('Exam')->get_cutoffs($exam_id);
         $this->view('/home/summary', $summary, $configs, $exam, $cutoffs);
     }
+
+    public function class_summary($exam_id)
+    {
+        if ($_COOKIE['user_id'] == null)
+        {
+            header('location:/login/index');
+            return;
+        }
+        $results = $this->model('Results')->get_marks($exam_id);
+        $configs = $this->model('Exam')->get_config($exam_id);
+        $exam = $this->model('Exam')->get_exam($exam_id);
+        $cutoffs = $this->model('Exam')->get_cutoffs($exam_id);
+        $this->view('/home/class_summary', $results, $configs, $exam, $cutoffs);
+    }
 }
 
