@@ -62,6 +62,7 @@
         </ul>
         <ul class="navbar-nav ms-auto mb-2 mb-md-0">
             <?php
+              session_start();
               if(isset($_SESSION['user_id']))
               {
                 echo "<li class='nav-item'><a class='nav-link' href='/home/account'>{$_SESSION['username']}</a></li>";
