@@ -7,7 +7,7 @@
     <h1>Mark exam</h1>
     <br>
     <a href="/home/student_list/<?=$extra_data->exam_id;?>" class="btn btn-secondary mb-3" role="button">Edit students</a>
-    <a href="/home/exam_list/<?=$_SESSION['user_id'];?>" class="btn btn-secondary mb-3" role="button">Exam list</a>
+    <a href="/home/exam_list/<?=$_COOKIE['user_id'];?>" class="btn btn-secondary mb-3" role="button">Exam list</a>
     <br>
     <form id="class_marks" name="marks" action="" method="post">
       <div class="overflow-auto">

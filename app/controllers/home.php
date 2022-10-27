@@ -9,7 +9,7 @@ class Home extends Controller
     
     public function index()
     {
-        if ($_SESSION['user_id'] == null)
+        if ($_COOKIE['user_id'] == null)
         {
             header('location:/login/index');
             return;
@@ -19,7 +19,7 @@ class Home extends Controller
 
     public function create_exam()
     {
-        if ($_SESSION['user_id'] == null)
+        if ($_COOKIE['user_id'] == null)
         {
             header('location:/login/index');
             return;
@@ -27,7 +27,7 @@ class Home extends Controller
         if(isset($_POST['action']))
         {
             $new_exam = $this->model('Exam');
-            $new_exam->user_id = $_SESSION['user_id'];
+            $new_exam->user_id = $_COOKIE['user_id'];
             $new_exam->subject = $_POST['subject'];
             $new_exam->year_level = $_POST['year_level'];
             $new_exam->class_code = $_POST['class_code'];
@@ -48,7 +48,7 @@ class Home extends Controller
 
     public function exam_list()
     {
-        if ($_SESSION['user_id'] == null)
+        if ($_COOKIE['user_id'] == null)
         {
             header('location:/login/index');
             return;
@@ -59,7 +59,7 @@ class Home extends Controller
 
     public function mark_exam($exam_id)
     {
-        if ($_SESSION['user_id'] == null)
+        if ($_COOKIE['user_id'] == null)
         {
             header('location:/login/index');
             return;
@@ -86,7 +86,7 @@ class Home extends Controller
 
     public function delete_exam($exam_id)
     {
-        if ($_SESSION['user_id'] == null)
+        if ($_COOKIE['user_id'] == null)
         {
             header('location:/login/index');
             return;
@@ -103,7 +103,7 @@ class Home extends Controller
 
     public function student_list($exam_id)
     {
-        if ($_SESSION['user_id'] == null)
+        if ($_COOKIE['user_id'] == null)
         {
             header('location:/login/index');
             return;
@@ -123,7 +123,7 @@ class Home extends Controller
 
     public function delete_student($student_id)
     {
-        if ($_SESSION['user_id'] == null)
+        if ($_COOKIE['user_id'] == null)
         {
             header('location:/login/index');
             return;
@@ -146,7 +146,7 @@ class Home extends Controller
 
     public function config_exam($exam_id)
     {
-        if ($_SESSION['user_id'] == null)
+        if ($_COOKIE['user_id'] == null)
         {
             header('location:/login/index');
             return;
@@ -176,7 +176,7 @@ class Home extends Controller
 
     public function summary($exam_id, $student_id)
     {
-        if ($_SESSION['user_id'] == null)
+        if ($_COOKIE['user_id'] == null)
         {
             header('location:/login/index');
             return;

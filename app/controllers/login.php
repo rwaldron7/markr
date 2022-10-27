@@ -15,8 +15,8 @@ class Login extends Controller
             $user = $this->model('User')->find_username($_POST['username']);
             if($user != null && password_verify($_POST['password'], $user->password_hash))
             {
-                $_SESSION['user_id'] = $user->user_id;
-                $_SESSION['username'] = $user->username;
+                setcookie('user_id', $user->user_id, time() + (86400 * 30), "/");
+                setcookie('username', $user->username, time() + (86400 * 30), "/");
                 header('location:/home/index');
             }
             $this->view('login/index', 'Incorrect username/password combination!');
@@ -52,7 +52,8 @@ class Login extends Controller
     public function logout()
     {
         // Process logout requests
-        session_destroy();
+        setcookie($user_id, NULL, "/");
+        setcookie($username, NULL, "/");
         header('location:/login/index');
     }
 }

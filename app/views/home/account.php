@@ -5,9 +5,9 @@
 <main class="container pt-5">
   <div class="p-5 mt-5 rounded">
     <?php
-        if(isset($_SESSION['user_id']))
+        if(isset($_COOKIE['user_id']))
         {
-          echo "<h1>Hello, {$_SESSION['username']}.</h1><br>";
+          echo "<h1>Hello, {$_COOKIE['username']}.</h1><br>";
           echo "<a class='btn btn-warning mb-3' href='/login/logout'>Log out</a>";
         }
         else

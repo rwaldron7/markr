@@ -28,7 +28,7 @@ class Exam extends Model
     {
         $sql = 'SELECT * FROM exams WHERE user_id = :user_id';
         $stmt = self::$conn->prepare($sql);
-        $stmt->execute(['user_id'=>$_SESSION['user_id']]);
+        $stmt->execute(['user_id'=>$_COOKIE['user_id']]);
         $stmt->setFetchMode(\PDO::FETCH_CLASS, 'App\Model\Exam');
         return $stmt->fetchAll();
     }
@@ -37,7 +37,7 @@ class Exam extends Model
     {
         $sql = 'SELECT exam_id FROM exams WHERE user_id = :user_id AND class_code = :class_code';
         $stmt = self::$conn->prepare($sql);
-        $stmt->execute(['user_id'=>$_SESSION['user_id'], 'class_code'=>$class_code]);
+        $stmt->execute(['user_id'=>$_COOKIE['user_id'], 'class_code'=>$class_code]);
         $stmt->setFetchMode(\PDO::FETCH_CLASS, 'App\Model\Exam');
         return $stmt->fetchAll();
     }
