@@ -19,6 +19,7 @@
               <td>$exam->class_code</td>
               <td>$exam->no_of_questions</td>
               <td><a href='/home/mark_exam/$exam->exam_id' class='btn btn-secondary' role='button'>Mark</a>
+              <a href='/home/config_exam/$exam->exam_id' class='btn btn-secondary' role='button'>Configure exam</a>
               <a href='/home/student_list/$exam->exam_id' class='btn btn-secondary' role='button'>Edit students</a>
               <a href='/home/delete_exam/$exam->exam_id' class='btn btn-secondary' role='button'>Delete</a></td>
               </tr>";

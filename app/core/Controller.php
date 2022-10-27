@@ -15,7 +15,7 @@ class Controller
         else return NULL;
     }
 
-    protected function view($view, $data = [], $extra_data = [])
+    protected function view($view, $data = [], $extra_data = [], $more_data = [], $bonus_data = [])
     {
         if (file_exists('../app/views/' . $view . '.php'))
         {

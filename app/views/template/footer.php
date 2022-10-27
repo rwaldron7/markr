@@ -13,7 +13,7 @@
   <script src="/js/jquery-3.6.1.min.js"></script>
   <script src="/js/bootstrap.bundle.min.js"></script>
   <script src="/js/all.min.js"></script>
+ 
+</body>
 
-  </body>
-
-</html>
+</html> 

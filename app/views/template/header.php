@@ -17,15 +17,26 @@
     .table-marking>tbody>tr>td, ..table-marking>tbody>tr>th, ..table-marking>tfoot>tr>td, ..table-marking>tfoot>tr>th, ..table-marking>thead>tr>td, ..table-marking>thead>tr>th{
       margin: 0;
       padding: 0;
-      width: 40px;
+      min-width: 40px;
     }
     tr>td>input{
       margin: 0;
       padding: 0;
-      width: 40px;
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      border: 2px solid grey;
+    }
+    tr>td>.wide_input{
+      margin: 0;
+      padding: 0;
+      width: 96px;
+      height: 32px;
+      border-radius: 10px;
+      border: 2px solid grey;
     }
     .name-columns{
-      min-width: 100px;
+      width: auto;
     }
   </style>
 </head>
