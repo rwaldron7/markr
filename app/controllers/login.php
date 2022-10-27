@@ -52,8 +52,8 @@ class Login extends Controller
     public function logout()
     {
         // Process logout requests
-        setcookie($user_id, NULL, "/");
-        setcookie($username, NULL, "/");
+        setcookie('user_id', NULL, 0, "/");
+        setcookie('username', NULL, 0, "/");
         header('location:/login/index');
     }
 }
