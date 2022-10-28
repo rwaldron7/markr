@@ -1,5 +1,4 @@
 # MarkR project
-The landing page of the Git site describes the project's objectives, features, and includes a step-by-step developer guide for deploying the web application (10 marks). 
 ## Project objectives
 The main objective of this project is to help teachers with the process of marking exams and giving feedback to students. Many teachers record their marks on paper, which makes it virtually impossible to perform any complicated data analysis on the results. It also makes it more difficult to calculate total marks and grades. For those that use a digital platform such as Microsoft Excel, it is possible to do many of the functions offered in the MarkR web application. However, the learning curve is high. The MarkR project will make it much easier to perform the same kinds of functions possible in Excel without the learning curve.
 ## Features
@@ -14,4 +13,4 @@ The main objective of this project is to help teachers with the process of marki
 9. Tab to go to next student: Because most teachers will mark question-by-question and not student-by-student, the tab key moves the cursor down an input
 10. Class summary: On the marking page is a button "Class summary" which gives the same information as the student summary, except for the class on average
 ## Developer guide
-This web application is deployed at markr-demo.herokuapp.com. For local testing,
+This web application is deployed at markr-demo.herokuapp.com. For local testing, the XAMPP server was used, which uses Linux, Apache, MariaDB, PHP and Perl. The database is SQL, and for deployment Heroku was used with an external ClearDB SQL database. The application could be deployed on any server as long as PHP is installed and it can connect to an SQL database. Heroku makes it very easy to deploy an application because it can pull from a GitHub remote repository, and the only extra process in moving from local to deployed is migrating the database over.
